@@ -1,0 +1,7 @@
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'NAME-WHATEVER-YOU-WANT';
+    src: url("../fonts/NAME-WHATEVER-YOU-WANT.eot");
+    src: url("../fonts/NAME-WHATEVER-YOU-WANT.eot?#iefix") format("embedded-opentype"), url("../fonts/NAME-WHATEVER-YOU-WANT.woff") format("woff"), url("../fonts/NAME-WHATEVER-YOU-WANT.ttf") format("truetype"), url("../fonts/NAME-WHATEVER-YOU-WANT.svg#ecoicons") format("svg");
+}
