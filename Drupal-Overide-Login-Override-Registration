@@ -1,0 +1,49 @@
+/**
+ * 
+ *Overide the user login, user registration, and user password default forms created
+ *by Drupal core, or your current base theme. PART 1
+ *
+ **/
+function themename_theme() {
+  $items = array();
+  $items['user_login'] = array(
+    'render element' => 'form',
+    'path' => drupal_get_path('theme', 'themename') . '/templates',
+    'template' => 'user-login',
+    'preprocess functions' => array(
+       'themename_preprocess_user_login'
+    ),
+  );
+  $items['user_register_form'] = array(
+    'render element' => 'form',
+    'path' => drupal_get_path('theme', 'themename') . '/templates',
+    'template' => 'user-register-form',
+    'preprocess functions' => array(
+      'themename_preprocess_user_register_form'
+    ),
+  );
+  $items['user_pass'] = array(
+    'render element' => 'form',
+    'path' => drupal_get_path('theme', 'themename') . '/templates',
+    'template' => 'user-pass',
+    'preprocess functions' => array(
+      'themename_preprocess_user_pass'
+    ),
+  );
+  return $items;
+}
+/**
+ * 
+ *Overide the user login, user registration, and user password default forms created
+ *by Drupal core, or your current base theme. PART 2
+ *
+ */
+function themename_preprocess_user_login(&$vars) {
+  $vars['intro_text'] = t('Custom Login');
+}
+function themename_preprocess_user_register_form(&$vars) {
+  $vars['intro_text'] = t('Custom Admin Registration');
+}
+function themename_preprocess_user_pass(&$vars) {
+  $vars['intro_text'] = t('Custom Admin Password Form');
+}
