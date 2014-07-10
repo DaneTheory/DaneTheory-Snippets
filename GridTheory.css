@@ -1,0 +1,181 @@
+/*=======================================
+GridTheory - A Damn Simple Grid System
+Created By: Branden Dane
+Website: http://www.DaneTheory.com
+=========================================*/
+
+/*****MAKE SURE TO CALL THIS STYLESHEET BEFORE ALL OTHER STYLESHEETS*****/
+
+/*=======================================
+            BOX-SIZING CSS
+=========================================*/
+*,
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+/*=======================================
+          GLOBAL IMAGE CSS STYLE
+=========================================*/
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto !important; 
+}
+/*=======================================
+          CONTAINER CSS
+=========================================*/
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+/*=======================================
+          WRAPPER CSS
+=========================================*/
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+/*=======================================
+    CLEARFIX CSS ==> CONTAINER,WRAPPER,ROWS
+=========================================*/
+.container:after,
+.wrapper:after,
+.row:after {
+      content: "";
+      display: table;
+      clear: both; 
+}
+/*=======================================
+    COLUMN CSS ==> ATTRIBUTE SELECTOR
+=========================================*/
+[class*='column-'] {
+    float: left;
+    padding-left: 15px;     /***Edit Your Gutters Here***/
+    padding-right: 15px;    /***Edit Your Gutters Here***/
+    padding-top: auto;      /***Edit Your Gutters Here***/
+    padding-bottom: auto;   /***Edit Your Gutters Here***/
+    width: 100%;
+    min-height: 1px; 
+}
+
+/*=======================================
+The markup we have so far is mobile-first 
+centric. We will use media queries to 
+define responsive breakpoints. The default
+media queries defined here closely resemble 
+Bootstrap 3's early setup. 
+         12 Column Layout
+         Mobile=> Tablet=> Desktop
+         NA=>     728px=>  1207px
+=========================================*/
+
+/*=======================================
+          MEDIA QUERIES CSS
+=========================================*/
+
+/* Tablet = 728px width
+***************************/
+@media only screen and (min-width: 728px) {
+
+.container {
+    width: 100%;          /***Full-Width by default. Vary percentage to affect page margins***/
+  /*max-width: 1207px;*/  /***Uncomment this to set a max width***/
+}
+.wrapper {
+    width: 95%;          /***Vary percentage to affect container margins***/
+  /*max-width: 1207px;*/  /***Uncomment this to set a max width***/
+}
+.column-1 {
+   width: 8.33333%; 
+}
+.column-2 {
+  width: 16.66667%; 
+}
+.column-3 {
+  width: 25%; 
+}
+.column-4 {
+  width: 33.33333%; 
+}
+.column-5 {
+  width: 41.66667%; 
+}
+.column-6 {
+  width: 50%; 
+}
+.column-7 {
+  width: 58.33333%; 
+}
+.column-8 {
+  width: 66.66667%; 
+}
+.column-9 {
+  width: 75%; 
+}
+.column-10 {
+  width: 83.33333%; 
+}
+.column-11 {
+  width: 91.66667%; 
+}
+.column-12 {
+  width: 100%; 
+} 
+    }     /***End Tablet Media Query***/
+
+
+
+/* Desktop = 1207px width
+***************************/
+@media only screen and (min-width: 1207px) {
+ 
+.container {
+    width: 100%;          /***Full-Width by default. Vary percentage to affect page margins***/
+  /*max-width: 1207px;*/  /***Uncomment this to set a max width***/
+}
+.wrapper {
+    width: 95%;          /***Vary percentage to affect container margins***/
+  /*max-width: 1207px;*/  /***Uncomment this to set a max width***/
+}
+.column-1 {
+   width: 8.33333%; 
+}
+.column-2 {
+  width: 16.66667%; 
+}
+.column-3 {
+  width: 25%; 
+}
+.column-4 {
+  width: 33.33333%; 
+}
+.column-5 {
+  width: 41.66667%; 
+}
+.column-6 {
+  width: 50%; 
+}
+.column-7 {
+  width: 58.33333%; 
+}
+.column-8 {
+  width: 66.66667%; 
+}
+.column-9 {
+  width: 75%; 
+}
+.column-10 {
+  width: 83.33333%; 
+}
+.column-11 {
+  width: 91.66667%; 
+}
+.column-12 {
+  width: 100%; 
+} 
+    } /***End Desktop Media Query***/
