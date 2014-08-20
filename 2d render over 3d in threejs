@@ -1,0 +1,28 @@
+// Need to add 2d text into your 3d scene? Here's how and why.
+
+
+  // Render the text via the canvas.
+  var canvas = document.createElement('canvas');
+  
+  // The important step to remember next is to immediatley
+  // define your canvas width and height.
+  canvas.width = 60;
+  canvas.height = 20;
+  
+  // Finish your first code snippet with a context call.
+  var context = canvas.getContext('2d');
+  context.fillText("Branden Dane FTW", 0, 10);
+
+  // Now the last bit of magic comes from updating threejs with
+  // the canvas information. Set to true.
+  var texture = new THREE.Texture(canvas);
+  texture.needsUpdate = true;
+  
+  // Sprite is used here. Other methods will work as well.
+  var sprite = new THREE.Sprite({
+    map: texture,
+    transparent: true,
+    useScreenCoordinates: false
+  });
+  sprite.position.set(0,-150,0);
+  scene.add(sprite);  
