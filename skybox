@@ -1,4 +1,4 @@
-// Code Snippet For creating a Skybox in ThreeJS. Currently works with ThreeJS Build 65
+// Code Snippet For creating a Skybox in ThreeJS. Currently works with ThreeJS Build 67
 		   var imagePrefix = "images/skybox/";
 	        var directions  = ["posx", "negx", "posy", "negy", "posz", "negz"];
 	        var imageSuffix = ".png";
